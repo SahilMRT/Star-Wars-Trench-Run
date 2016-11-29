@@ -16,7 +16,7 @@ namespace Star_Wars_Trench_Run
 {
     public partial class form1 : Form
     {
-        //
+        //Setting up variables
         int x;
         int y;
         int drop;
@@ -145,7 +145,7 @@ namespace Star_Wars_Trench_Run
                     Thread.Sleep(10);
 
                     //Ending Screen for the Soldier 
-                    formGraphics.DrawString("Good Job Soldier!", drawFont, drawBrush, 30, 60);
+                    formGraphics.DrawString("Mission Accomplished!", drawFont, drawBrush, 30, 60);
 
                 }
                 
