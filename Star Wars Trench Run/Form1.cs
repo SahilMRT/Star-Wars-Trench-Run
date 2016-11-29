@@ -46,7 +46,7 @@ namespace Star_Wars_Trench_Run
             BackgroundImage.Dispose();
             g.Clear(Color.Black);
             this.BackgroundImage = null;
-            Refresh();
+            Refresh(); 
             Graphics formGraphics = this.CreateGraphics();
             SolidBrush drawBrush = new SolidBrush(Color.Yellow);
             Font drawFont = new Font("Arial", 16, FontStyle.Regular);
