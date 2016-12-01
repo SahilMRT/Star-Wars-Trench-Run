@@ -25,7 +25,7 @@ namespace Star_Wars_Trench_Run
         int lineLeft;
         int lineRight;
 
-        //Adds sounds in program 
+        //Adds sounds in the program 
         SoundPlayer themeSong = new SoundPlayer(Properties.Resources.startheme);
         SoundPlayer starSong = new SoundPlayer(Properties.Resources.Death_Star_Sound);
         public form1()
@@ -53,15 +53,15 @@ namespace Star_Wars_Trench_Run
             themeSong.Play();
             formGraphics.DrawString("Death Star Attack Plan", drawFont, drawBrush, 125, 30);
             Thread.Sleep(2000);
-            formGraphics.DrawString(" During the battle, Rebel spies managed to steal", drawFont, drawBrush, 30, 100);
+            formGraphics.DrawString("During the battle, Rebel spies managed to steal", drawFont, drawBrush, 30, 100);
             Thread.Sleep(2000);
-            formGraphics.DrawString(" secret plans to the Empire's ultimate weapon, the ", drawFont, drawBrush, 30, 130);
+            formGraphics.DrawString("secret plans to the Empire's ultimate weapon, the ", drawFont, drawBrush, 30, 130);
             Thread.Sleep(2000);
-            formGraphics.DrawString(" Death Star, an armored space station with enough", drawFont, drawBrush, 30, 160);
+            formGraphics.DrawString("Death Star, an armored space station with enough", drawFont, drawBrush, 30, 160);
             Thread.Sleep(2000);
             formGraphics.DrawString("power to destroy an entire planet!", drawFont, drawBrush, 30, 190);
             Thread.Sleep(2000);
-            formGraphics.DrawString(" Princess Leia races home, with the stolen plans", drawFont, drawBrush, 30, 220);
+            formGraphics.DrawString("Princess Leia races home, with the stolen plans", drawFont, drawBrush, 30, 220);
             Thread.Sleep(2000);
             formGraphics.DrawString("that can save her people and restore", drawFont, drawBrush, 30, 250);
             Thread.Sleep(2000);
@@ -80,44 +80,34 @@ namespace Star_Wars_Trench_Run
 
             for (int i = 0; i <= 304; i++)
             {
+                g.Clear(Color.Black);
                 if (i >= 0 && i <= 60)
                 {
-                    g.Clear(Color.Black);
                     g.DrawEllipse(pen, 180, 130, 300, 300);
                     g.DrawEllipse(pen, 322, 275, 16, 16);
                     g.DrawLine(pen, 330, 153, 330, 275);
                     g.DrawRectangle(pen, 305, 132, 50, 20);
-
                     g.FillRectangle(brush, x, y, 30, 10);
-
-                    Thread.Sleep(10);
                     x -= 5;
                     y = y + 1;
                 }
                 else if (i >= 60 && i <= 106)
                 {
-                    g.Clear(Color.Black);
                     g.DrawEllipse(pen, 180, 130, 300, 300);
                     g.DrawEllipse(pen, 322, 275, 16, 16);
                     g.DrawLine(pen, 330, 153, 330, 275);
                     g.DrawRectangle(pen, 305, 132, 50, 20);
                     g.FillRectangle(brush, x, 110, 30, 10);
-
-                    Thread.Sleep(10);
                     x--;
                 }
                 else if (i >= 106 && i < 189)
                 {
-                    g.Clear(Color.Black);
                     g.DrawEllipse(pen, 180, 130, 300, 300);
                     g.DrawEllipse(pen, 322, 275, 16, 16);
                     g.DrawLine(pen, 330, 153, 330, 275);
                     g.DrawRectangle(pen, 305, 132, 50, 20);
-
                     g.FillRectangle(brush, x, 110, 30, 10);
                     g.FillRectangle(brush, 327, drop, 7, 7);
-
-                    Thread.Sleep(10);
                     x--;
                     drop += 2;
                 }
@@ -127,12 +117,10 @@ namespace Star_Wars_Trench_Run
                 }
                 else if (i > 189 && i <= 301)
                 {
-                    g.Clear(Color.Black);
                     g.DrawEllipse(pen, 180, 130, 300, 300);
                     g.DrawEllipse(pen, 322, 275, 16, 16);
                     g.DrawLine(pen, 330, 153, 330, 275);
                     g.DrawRectangle(pen, 305, 132, 50, 20);
-                    Thread.Sleep(10);
                     lineUp--;
                     lineRight++;
                     lineLeft--;
@@ -142,13 +130,13 @@ namespace Star_Wars_Trench_Run
 
                     // Declaring parts of the bomb after and during its explosion 
                     g.FillEllipse(brush2, 180 - i / 2, 130 - i / 2, 300 + i, 300 + i);
-                    Thread.Sleep(10);
-
+                   Thread.Sleep(10);
+                     
                     //Ending Screen for the Soldier 
+                    g.Clear(Color.Black); 
                     formGraphics.DrawString("Mission Accomplished!", drawFont, drawBrush, 30, 60);
-
                 }
-                
+                Thread.Sleep(10);
             }
         }
     }
